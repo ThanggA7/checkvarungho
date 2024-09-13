@@ -112,6 +112,9 @@ function Home() {
           </a>{" "}
           (10/9/2024 - 12/9/2024) )
         </p>
+        <p className="text-white font-Inter text-[14px] sm:text-[16px] mt-[20px]">
+          Hiện tại mình chưa cập nhật sao kê của Viettinbank nhé mọi người !!!!!
+        </p>
       </div>
 
       <div className="mt-10">
