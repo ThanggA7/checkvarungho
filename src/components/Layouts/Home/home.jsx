@@ -15,7 +15,8 @@ function Home() {
       const filtered = data.filter(
         (item) =>
           item.ct_num.includes(searchTerm) ||
-          item.desc.toLowerCase().includes(searchTerm.toLowerCase())
+          item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.money.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setFilteredData(filtered);
       setCurrentPage(1);
