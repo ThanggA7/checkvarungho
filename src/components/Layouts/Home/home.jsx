@@ -117,6 +117,33 @@ function Home() {
           </a>{" "}
           (10/9/2024 - 12/9/2024) )
         </p>
+        <p className="text-white mt-2">
+          File Json cung cấp bởi{" "}
+          <a
+            className="text-[#72B5F0]"
+            href="https://www.facebook.com/99.hoangtran"
+          >
+            Quỳnh Anh
+          </a>{" "}
+          ,{" "}
+          <a
+            className="text-[#72B5F0]"
+            href="https://www.facebook.com/99.hoangtran"
+          >
+            Hoang Tran{" "}
+          </a>
+          ,Code bởi{" "}
+          <a
+            className="text-[#72B5F0]"
+            href="https://www.facebook.com/99.hoangtran"
+          >
+            Quỳnh Anh
+          </a>{" "}
+          và{" "}
+          <a className="text-[#72B5F0]" href="#!">
+            Như Thắng{" "}
+          </a>{" "}
+        </p>
         <Analytics />
       </div>
 
