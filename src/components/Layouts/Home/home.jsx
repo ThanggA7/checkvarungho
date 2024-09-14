@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { icons } from "../../../assets/icons";
-import data from "../../../data/data.json";
+import dataFile1 from "../../../data/data.json";
+import dataFile2 from "../../../data/output.json";
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -8,20 +9,23 @@ function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(5);
 
+  const combinedData = [...dataFile1, ...dataFile2];
+
   const handleSearch = () => {
     if (searchTerm === "") {
       setFilteredData([]);
     } else {
-      const filtered = data.filter(
+      const filtered = combinedData.filter(
         (item) =>
-          item.ct_num.includes(searchTerm) ||
-          item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.money.toLowerCase().includes(searchTerm.toLowerCase())
+          item.ct_num.toString().includes(searchTerm) ||
+          item.desc.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setFilteredData(filtered);
       setCurrentPage(1);
     }
   };
+
+  // Logic for pagination
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
@@ -56,7 +60,7 @@ function Home() {
       if (currentPage < totalPages - 2) {
         middlePages.push("...");
         middlePages.push(lastPage);
-      } else if (currentPage === totalPages) {
+      } else if (currentPage === totalPages - 1) {
         middlePages.push(lastPage);
       }
 
@@ -73,47 +77,29 @@ function Home() {
         </h1>
         <p className="text-white font-Inter text-base mb-2">
           Dữ liệu được cung cấp bởi{" "}
-          <a
-            className="text-[#72B5F0]"
-            href="https://www.facebook.com/t.rekttt"
-          >
+          <a className="text-[#72B5F0]" href="#!">
             Việt Thảo
           </a>
           ,{" "}
-          <a
-            className="text-[#72B5F0]"
-            href="https://www.facebook.com/mttqvietnam"
-          >
+          <a className="text-[#72B5F0]" href="#!">
             Mặt Trận Tổ Quốc
           </a>{" "}
           và File PDF gốc sao kê của{" "}
-          <a
-            className="text-[#72B5F0]"
-            href="https://www.facebook.com/thongtinchinhphu/posts/pfbid0MSnut9b7M4vZ8MqbZZj76Gg8V2YmnG7eh5R8JnGfaxLFUyWbFxzHq4J1dc8cWDv9l"
-          >
+          <a className="text-[#72B5F0]" href="#!">
             VietTinBank
           </a>
           ,{" "}
-          <a
-            className="text-[#72B5F0]"
-            href="https://www.facebook.com/thongtinchinhphu/posts/pfbid027QC8dzUuNEPWSFYdMPfyLkmbDaMMYM5JbNmz3bSBzDoXdnmNnuYFtjruy6txSQcnl"
-          >
+          <a className="text-[#72B5F0]" href="#!">
             VietComBank
           </a>
         </p>
         <p className="text-white text-base">
-          Lưu ý: Dữ liệu theo danh sách công bố từ MTTQVN đến ngày 10/09/2024
+          Lưu ý: Dữ liệu theo danh sách công bố từ MTTQVN đến ngày 12/09/2024
           (Cập nhật{" "}
-          <a
-            className="text-[#72B5F0]"
-            href="https://www.facebook.com/thongtinchinhphu/posts/pfbid0MSnut9b7M4vZ8MqbZZj76Gg8V2YmnG7eh5R8JnGfaxLFUyWbFxzHq4J1dc8cWDv9l"
-          >
+          <a className="text-[#72B5F0]" href="#!">
             VietTinBank
           </a>{" "}
           (10/9/2024 - 12/9/2024) )
-        </p>
-        <p className="text-white font-Inter text-[14px] sm:text-[16px] mt-[20px]">
-          Hiện tại mình chưa cập nhật sao kê của Viettinbank nhé mọi người !!!!!
         </p>
       </div>
 
@@ -159,7 +145,7 @@ function Home() {
                         {item.ct_num}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        {item.money} ₫
+                        {item.money ? `${item.money} ₫` : "-"}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         {item.desc}
