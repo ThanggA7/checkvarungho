@@ -78,26 +78,41 @@ function Home() {
         </h1>
         <p className="text-white font-Inter text-base mb-2">
           Dữ liệu được cung cấp bởi{" "}
-          <a className="text-[#72B5F0]" href="#!">
+          <a
+            className="text-[#72B5F0]"
+            href="https://www.facebook.com/t.rekttt"
+          >
             Việt Thảo
           </a>
           ,{" "}
-          <a className="text-[#72B5F0]" href="#!">
+          <a
+            className="text-[#72B5F0]"
+            href="https://www.facebook.com/mttqvietnam"
+          >
             Mặt Trận Tổ Quốc
           </a>{" "}
           và File PDF gốc sao kê của{" "}
-          <a className="text-[#72B5F0]" href="#!">
-            VietTinBank
+          <a
+            className="text-[#72B5F0]"
+            href="https://www.facebook.com/thongtinchinhphu/posts/pfbid03rYwiprYWtPfA94HV6rtjDn6TUZDD7jPgc364x7Vsa54CKzMbMvKksWQgjX1y6k3l"
+          >
+            VietComBank
           </a>
           ,{" "}
-          <a className="text-[#72B5F0]" href="#!">
-            VietComBank
+          <a
+            className="text-[#72B5F0]"
+            href="https://www.facebook.com/thongtinchinhphu/posts/pfbid0MSnut9b7M4vZ8MqbZZj76Gg8V2YmnG7eh5R8JnGfaxLFUyWbFxzHq4J1dc8cWDv9l"
+          >
+            VietTinBank
           </a>
         </p>
         <p className="text-white text-base">
           Lưu ý: Dữ liệu theo danh sách công bố từ MTTQVN đến ngày 12/09/2024
           (Cập nhật{" "}
-          <a className="text-[#72B5F0]" href="#!">
+          <a
+            className="text-[#72B5F0]"
+            href="https://www.facebook.com/thongtinchinhphu/posts/pfbid0MSnut9b7M4vZ8MqbZZj76Gg8V2YmnG7eh5R8JnGfaxLFUyWbFxzHq4J1dc8cWDv9l"
+          >
             VietTinBank
           </a>{" "}
           (10/9/2024 - 12/9/2024) )
