@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { icons } from "../../../assets/icons";
 import dataFile1 from "../../../data/data.json";
 import dataFile2 from "../../../data/output.json";
@@ -101,6 +102,7 @@ function Home() {
           </a>{" "}
           (10/9/2024 - 12/9/2024) )
         </p>
+        <Analytics />
       </div>
 
       <div className="mt-10">
