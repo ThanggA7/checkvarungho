@@ -19,14 +19,14 @@ function Home() {
       const filtered = combinedData.filter(
         (item) =>
           item.ct_num.toString().includes(searchTerm) ||
-          item.desc.toLowerCase().includes(searchTerm.toLowerCase())
+          item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.ct_num.toString().includes(searchTerm)
       );
       setFilteredData(filtered);
       setCurrentPage(1);
     }
   };
 
-  // Logic for pagination
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
@@ -105,6 +105,13 @@ function Home() {
           >
             VietTinBank
           </a>
+          ,{" "}
+          <a
+            className="text-[#72B5F0]"
+            href="https://www.facebook.com/mttqvietnam/posts/pfbid02Xd59uafubKYurxCtfuoscoRWQosyc6X9VbZaG88DgoxWiHYsrmyz44Tq6GBgJm8fl"
+          >
+            BIDV
+          </a>
         </p>
         <p className="text-white text-base">
           Lưu ý: Dữ liệu theo danh sách công bố từ MTTQVN đến ngày 12/09/2024
@@ -117,7 +124,7 @@ function Home() {
           </a>{" "}
           (10/9/2024 - 12/9/2024) )
         </p>
-    
+
         <Analytics />
       </div>
 
