@@ -122,7 +122,14 @@ function Home() {
           >
             VietTinBank
           </a>{" "}
-          (10/9/2024 - 12/9/2024) )
+          (10/9/2024 - 12/9/2024) ,{" "}
+          <a
+            className="text-[#72B5F0]"
+            href="https://www.facebook.com/mttqvietnam/posts/pfbid02Xd59uafubKYurxCtfuoscoRWQosyc6X9VbZaG88DgoxWiHYsrmyz44Tq6GBgJm8fl"
+          >
+            BIDV
+          </a>{" "}
+          (1/9/2024 - 12/9/2024) )
         </p>
 
         <Analytics />
